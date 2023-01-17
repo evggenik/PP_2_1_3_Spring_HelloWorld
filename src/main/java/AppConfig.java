@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class AppConfig {
  
-    @Bean(name="helloworld")
+    @Bean(name="helloWorld")
 //    @Scope("singleton")
     public HelloWorld getHelloWorld() {
         HelloWorld helloWorld = new HelloWorld();
@@ -13,9 +13,9 @@ public class AppConfig {
         return helloWorld;
     }
 
-    @Bean(name="cat")
+    @Bean
     @Scope("prototype")
-    public Cat getCat() {
+    public Cat catBean() {
         return new Cat();
     }
 }
